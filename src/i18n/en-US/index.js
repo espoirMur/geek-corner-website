@@ -1,9 +1,7 @@
 export default {
   menu: {
     explore: {
-      title: 'Explore Courses',
-      menu1: 'Course',
-      menu2: 'Menu 2',
+      book: 'Book a call',
     },
   },
 }

@@ -16,6 +16,7 @@
 <script setup>
 import NavBar from 'src/components/NavBar/IndexPage.vue'
 </script>
+
 <style>
 .route-enter-from {
   opacity: 0;

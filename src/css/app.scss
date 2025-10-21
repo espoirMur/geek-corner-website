@@ -1,1 +1,52 @@
 // app global css in SCSS form
+@import url(https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900,1&f[]=cabinet-grotesk@500,700,800,900&display=swap);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  font-family: 'satoshi';
+}
+.bb-container {
+  @apply max-w-6xl mx-auto px-6 sm:px-2 w-full;
+}
+.mailto-animated {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.mailto-animated::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #2196f3;
+  transition: width 0.3s ease-in-out;
+}
+
+.mailto-animated:hover::after {
+  width: 100%;
+}
+body.body--dark .text-primary {
+  color: gray !important;
+}
+.title-responsive {
+  font-weight: bold;
+  font-size: 3rem; /* équivalent de text-h3 */
+
+  /* Mobile */
+  @media (max-width: 600px) {
+    font-size: 1.5rem; /* équivalent de text-h5/h6 */
+  }
+}
+html::-webkit-scrollbar {
+  width: 0.2rem;
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 2rem;
+  background: #fff;
+}

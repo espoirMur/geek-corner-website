@@ -9,7 +9,7 @@
 
       <!-- Bouton central -->
       <button
-        class="px-5 py-2 bg-gray-800 text-white rounded-full hover:bg-gray-800 transition-all text-sm sm:text-base"
+        class="px-5 py-2 bg-gray-800 text-white text-semibold rounded-full hover:bg-gray-800 transition-all text-sm sm:text-base"
       >
         {{ t('explore.book') }}
       </button>

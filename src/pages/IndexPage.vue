@@ -1,22 +1,21 @@
 <template>
   <div
-    class="min-h-screen flex flex-col items-center justify-center text-center text-gray-800 font-sans bg-cover bg-center bg-no-repeat px-4 transition-all duration-500"
+    class="min-h-screen bg-gray-200 flex flex-col items-center justify-center text-center text-gray-800 font-sans bg-cover bg-center bg-no-repeat px-4 transition-all duration-500"
     :style="{ backgroundImage: `url('${bgImage}')` }"
   >
-    <!-- Section principale -->
-    <section class="max-w-3xl mx-auto space-y-8 py-20 md:py-32">
+    <section class="bb-container space-y-8 py-20 md:py-32">
+      <!-- Titre -->
       <div v-motion-slide-bottom>
         <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-gray-900 drop-shadow-lg">
           <span class="font-extrabold italic text-gray-900">Refined</span>
           turns your idea into the MVP.
         </h1>
-
         <p class="mt-4 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
           Fast, affordable, and stress-free.
         </p>
       </div>
 
-      <!-- Boutons centrés -->
+      <!-- Boutons -->
       <div v-motion-pop class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
         <button
           class="px-8 py-3 bg-gray-900 text-white rounded-full text-lg font-medium hover:bg-gray-800 transition-all shadow-md"
@@ -35,68 +34,62 @@
       </p>
 
       <!-- Mind map -->
-      <div
-        v-motion-slide-top
-        class="relative flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-10 mt-12"
-      >
-        <div class="flex flex-col space-y-4">
-          <div class="bg-white shadow-xl rounded-xl px-4 py-3 text-gray-700 text-lg font-medium">
-            Web app <span class="text-gray-400 text-sm font-normal">Product</span>
-          </div>
-          <div class="bg-white shadow-xl rounded-xl px-4 py-3 text-gray-700 text-lg font-medium">
-            Landing <span class="text-gray-400 text-sm font-normal">Sales driver</span>
-          </div>
-          <div class="bg-white shadow-xl rounded-xl px-4 py-3 text-gray-700 text-lg font-medium">
-            Blog <span class="text-gray-400 text-sm font-normal">Traffic</span>
-          </div>
-        </div>
+      <div class="relative flex items-center justify-center w-full min-h-[300px] p-4">
+        <!-- SVG -->
+        <svg class="absolute inset-0 w-full h-full pointer-events-none">
+          <!-- Lignes + points de départ -->
+          <g>
+            <circle cx="260" cy="100" r="4" class="start-point" />
+            <path d="M260,100 C360,110 420,130 500,150" class="line" />
+          </g>
+          <g>
+            <circle cx="260" cy="160" r="4" class="start-point" />
+            <path d="M260,160 C360,155 420,150 500,150" class="line" />
+          </g>
+          <g>
+            <circle cx="260" cy="220" r="4" class="start-point" />
+            <path d="M260,220 C360,190 420,165 500,150" class="line" />
+          </g>
 
-        <svg
-          class="hidden md:block w-40 h-40 absolute -z-10"
-          viewBox="0 0 200 200"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M30,100 C60,60 140,60 170,100 C140,140 60,140 30,100 Z"
-            fill="none"
-            stroke="#CBD5E1"
-            stroke-width="2"
-          />
+          <!-- Point central -->
+          <circle cx="500" cy="150" r="7" class="central-point" />
         </svg>
 
-        <div class="bg-white shadow-xl rounded-xl px-6 py-4 text-gray-800 text-lg font-semibold">
+        <!-- Boîte centrale -->
+        <div
+          class="absolute right-[80px] bg-white shadow-md rounded-lg px-5 py-3 font-mono text-lg text-gray-800 border border-gray-200"
+        >
           Your next big thing
         </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aliquam recusandae
-          magni fugit nesciunt, inventore nisi enim debitis! Saepe commodi dolores non nostrum
-          deserunt totam, neque nam excepturi ex doloribus! Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Praesentium aliquam recusandae magni fugit nesciunt, inventore nisi enim
-          debitis! Saepe commodi dolores non nostrum deserunt totam, neque nam excepturi ex
-          doloribus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aliquam
-          recusandae magni fugit nesciunt, inventore nisi enim debitis! Saepe commodi dolores non
-          nostrum deserunt totam, neque nam excepturi ex doloribus! Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Praesentium aliquam recusandae magni fugit nesciunt,
-          inventore nisi enim debitis! Saepe commodi dolores non nostrum deserunt totam, neque nam
-          excepturi ex doloribus! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Praesentium aliquam recusandae magni fugit nesciunt, inventore nisi enim debitis! Saepe
-          commodi dolores non nostrum deserunt totam, neque nam excepturi ex doloribus! Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Praesentium aliquam recusandae magni fugit
-          nesciunt, inventore nisi enim debitis! Saepe commodi dolores non nostrum deserunt totam,
-          neque nam excepturi ex doloribus! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Praesentium aliquam recusandae magni fugit nesciunt, inventore nisi enim debitis! Saepe
-          commodi dolores non nostrum deserunt totam, neque nam excepturi ex doloribus! Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Praesentium aliquam recusandae magni fugit
-          nesciunt, inventore nisi enim debitis! Saepe commodi dolores non nostrum deserunt totam,
-          neque nam excepturi ex doloribus! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Praesentium aliquam recusandae magni fugit nesciunt, inventore nisi enim debitis! Saepe
-          commodi dolores non nostrum deserunt totam, neque nam excepturi ex doloribus! Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Praesentium aliquam recusandae magni fugit
-          nesciunt, inventore nisi enim debitis! Saepe commodi dolores non nostrum deserunt totam,
-          neque nam excepturi ex doloribus! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Praesentium aliquam recusandae magni fugit nesciunt, inventore nisi enim debitis! Saepe
-          commodi dolores non nostrum deserunt totam, neque nam excepturi ex doloribus!
+
+        <!-- Boîtes latérales -->
+        <div
+          class="absolute left-[100px] top-[80px] bg-white rounded-lg shadow px-4 py-2 text-gray-800 border border-gray-200"
+        >
+          <p class="font-semibold">
+            Web app <span class="text-gray-400 font-normal">Product</span>
+          </p>
         </div>
+
+        <div
+          class="absolute left-[100px] top-[140px] bg-white rounded-lg shadow px-4 py-2 text-gray-800 border border-gray-200"
+        >
+          <p class="font-semibold">
+            Landing <span class="text-gray-400 font-normal">Sales driver</span>
+          </p>
+        </div>
+
+        <div
+          class="absolute left-[100px] top-[200px] bg-white rounded-lg shadow px-4 py-2 text-gray-800 border border-gray-200"
+        >
+          <p class="font-semibold">Blog <span class="text-gray-400 font-normal">Traffic</span></p>
+        </div>
+      </div>
+      <div>
+        <pricing-plans />
+      </div>
+      <div>
+        <question-check />
       </div>
     </section>
   </div>
@@ -104,11 +97,47 @@
 
 <script setup>
 import { ref } from 'vue'
+import QuestionCheck from 'src/components/base/QuestionCheck.vue'
+import PricingPlans from 'src/components/base/PricingPlans.vue'
 
-// ✅ Images testées et valides
-const backgrounds = [
-  '/img/bg.avif', // motif wax africain
-]
-
+const backgrounds = ['/img/bgr.avif']
 const bgImage = ref(backgrounds[Math.floor(Math.random() * backgrounds.length)])
 </script>
+
+<style scoped>
+.line {
+  stroke: #94a3b8;
+  stroke-width: 2.5;
+  fill: none;
+  stroke-linecap: round;
+}
+
+.start-point {
+  fill: #64748b;
+  stroke: white;
+  stroke-width: 2;
+}
+
+.central-point {
+  fill: #64748b;
+  stroke: white;
+  stroke-width: 3;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  svg {
+    display: none;
+  }
+
+  .absolute {
+    position: static !important;
+    margin-bottom: 0.75rem;
+  }
+
+  .bg-white {
+    width: 100%;
+    text-align: center;
+  }
+}
+</style>

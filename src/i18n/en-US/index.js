@@ -1,7 +1,5 @@
 export default {
-  menu: {
-    explore: {
-      book: 'Book a call',
-    },
+  explore: {
+    book: 'Book a call',
   },
 }

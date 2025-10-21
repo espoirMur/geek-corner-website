@@ -9,9 +9,9 @@
 
       <!-- Bouton central -->
       <button
-        class="px-5 py-2 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-all text-sm sm:text-base"
+        class="px-5 py-2 bg-gray-800 text-white rounded-full hover:bg-gray-800 transition-all text-sm sm:text-base"
       >
-        Book a call
+        {{ t('explore.book') }}
       </button>
       <LangSwitcher />
     </nav>
@@ -21,7 +21,9 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import LangSwitcher from '../LangSwitcher.vue'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const showNavbar = ref(false)
 
 const handleScroll = () => {
@@ -37,7 +39,7 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-/* Animation plus rapide et plus "pressée" */
+/* Animation */
 .slide-fade-enter-active {
   transition: all 0.25s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }

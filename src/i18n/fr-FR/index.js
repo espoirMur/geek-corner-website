@@ -1,7 +1,5 @@
 export default {
-  menu: {
-    explore: {
-      book: 'Réserver un appel',
-    },
+  explore: {
+    book: 'Réserver un appel',
   },
 }

@@ -3,7 +3,7 @@
     <!-- Bouton déclencheur -->
     <div
       @click="toggleDropdown"
-      class="flex items-center gap-2 px-2 py-1 md:px-2 md:py-2 bg-gray40 rounded-full text-black cursor-pointer hover:bg-sky-800 transition"
+      class="bg-gray-800 text-white flex items-center gap-2 px-2 py-1 md:px-2 md:py-2 rounded-full text-black cursor-pointer transition"
     >
       <slot name="icon">
         <svg
@@ -12,7 +12,7 @@
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="w-4 h-4 md:w-5 md:h-5"
+          class="w-4 h-4 md:w-5 md:h-5 text-white"
         >
           <path
             stroke-linecap="round"
@@ -30,7 +30,7 @@
         viewBox="0 0 24 24"
         stroke-width="2"
         stroke="currentColor"
-        class="w-3 h-3 md:w-4 md:h-4 transform transition-transform duration-300"
+        class="text-white w-3 h-3 md:w-4 md:h-4 transform transition-transform duration-300"
         :class="{ 'rotate-180': isOpen }"
       >
         <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25L12 15.75 4.5 8.25" />
@@ -40,7 +40,7 @@
     <!-- Dropdown -->
     <div
       v-if="isOpen"
-      class="absolute right-0 mt-2 w-40 bg-blue backdrop-blur-md rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50"
+      class="absolute right-0 mt-2 w-40 bg-gray-800 backdrop-blur-md rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50"
     >
       <ul class="py-1">
         <li

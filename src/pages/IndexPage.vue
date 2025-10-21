@@ -1,11 +1,11 @@
 <template>
   <div
-    class="min-h-screen bg-gray-200 flex flex-col items-center justify-center text-center text-gray-800 font-sans bg-cover bg-center bg-no-repeat px-4 transition-all duration-500"
+    class="bg-gray-200 flex flex-col items-center justify-center text-center text-gray-800 font-sans bg-cover bg-center bg-no-repeat px-4 transition-all duration-500"
     :style="{ backgroundImage: `url('${bgImage}')` }"
   >
-    <section class="bb-container space-y-8 py-20 md:py-32">
+    <section class="bb-container space-y-8">
       <!-- Titre -->
-      <div v-motion-slide-bottom>
+      <div class="py-20 md:py-32" v-motion-slide-bottom>
         <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-gray-900 drop-shadow-lg">
           <span class="font-extrabold italic text-gray-900">Refined</span>
           turns your idea into the MVP.
@@ -91,6 +91,9 @@
       <div>
         <question-check />
       </div>
+      <div>
+        <last-one />
+      </div>
     </section>
   </div>
 </template>
@@ -99,6 +102,7 @@
 import { ref } from 'vue'
 import QuestionCheck from 'src/components/base/QuestionCheck.vue'
 import PricingPlans from 'src/components/base/PricingPlans.vue'
+import LastOne from 'src/components/base/LastOne.vue'
 
 const backgrounds = ['/img/bgr.avif']
 const bgImage = ref(backgrounds[Math.floor(Math.random() * backgrounds.length)])

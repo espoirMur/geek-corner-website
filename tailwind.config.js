@@ -9,7 +9,11 @@ export default {
     './public/index.html',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        code: ['"Source Code Pro"', 'monospace'],
+      },
+    },
   },
   plugins: [],
 }

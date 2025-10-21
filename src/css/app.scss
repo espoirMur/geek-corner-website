@@ -1,5 +1,6 @@
 // app global css in SCSS form
 @import url(https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900,1&f[]=cabinet-grotesk@500,700,800,900&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,6 +9,9 @@
 }
 .bb-container {
   @apply max-w-3xl mx-auto px-6 sm:px-2 w-full;
+}
+.blondy {
+  font-family: 'Source Code Pro';
 }
 .mailto-animated {
   position: relative;

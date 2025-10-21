@@ -20,8 +20,8 @@
         </div>
 
         <!-- Contenu principal -->
-        <div class="text-sm md:text-base leading-relaxed whitespace-pre-line">
-          <p>
+        <div class="text-sm md:text-base font-code leading-relaxed whitespace-pre-line">
+          <p class="blondy">
             Hello, I'm Constantin. I went from being a 9-5 developer to launching my own products.
             The first two were quite successful, generating both income and happy users. Amazing
             feeling. Seeing others having great ideas but can't bring them to life, motivated me to

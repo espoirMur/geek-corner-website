@@ -2,6 +2,13 @@ export default {
   explore: {
     book: 'Book a call',
   },
+  hero: {
+    tagline_part1: 'turns your idea into the MVP.',
+    tagline_part2: 'Fast, affordable, and stress-free.',
+    book_call: 'Book a call',
+    or_pricing: 'or see pricing',
+    subtitle: 'We’ll build you a complete solution to kick-start your product.',
+  },
   plans: {
     monthly: {
       title: 'Monthly',

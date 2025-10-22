@@ -54,3 +54,41 @@ html::-webkit-scrollbar-thumb {
   border-radius: 2rem;
   background: #fff;
 }
+img[src*='cal.webp'] {
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
+}
+.line {
+  stroke: #94a3b8;
+  stroke-width: 2.5;
+  fill: none;
+  stroke-linecap: round;
+}
+
+.start-point {
+  fill: #64748b;
+  stroke: white;
+  stroke-width: 2;
+}
+
+.central-point {
+  fill: #64748b;
+  stroke: white;
+  stroke-width: 3;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  svg {
+    display: none;
+  }
+
+  .absolute {
+    position: static !important;
+    margin-bottom: 0.75rem;
+  }
+
+  .bg-white {
+    width: 100%;
+    text-align: center;
+  }
+}

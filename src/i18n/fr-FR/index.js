@@ -2,6 +2,13 @@ export default {
   explore: {
     book: 'Réserver un appel',
   },
+  hero: {
+    tagline_part1: 'transforme votre idée en MVP.',
+    tagline_part2: 'Rapide, abordable et sans stress.',
+    book_call: 'Réserver un appel',
+    or_pricing: 'ou voir les tarifs',
+    subtitle: 'Nous construirons une solution complète pour lancer votre produit.',
+  },
   plans: {
     monthly: {
       title: 'Mensuel',

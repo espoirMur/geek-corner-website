@@ -86,6 +86,9 @@
         </div>
       </div>
       <div>
+        <how-page />
+      </div>
+      <div>
         <pricing-plans />
       </div>
       <div>
@@ -103,6 +106,7 @@ import { ref } from 'vue'
 import QuestionCheck from 'src/components/base/QuestionCheck.vue'
 import PricingPlans from 'src/components/base/PricingPlans.vue'
 import LastOne from 'src/components/base/LastOne.vue'
+import HowPage from 'src/components/base/HowPage.vue'
 
 const backgrounds = ['/img/bgr.avif']
 const bgImage = ref(backgrounds[Math.floor(Math.random() * backgrounds.length)])

@@ -26,7 +26,6 @@
           <p class="text-gray-600 mb-4">{{ plan.price }}</p>
           <p class="text-sm text-gray-500 mb-5">{{ plan.description }}</p>
 
-          <!-- ✅ Liste des features bien structurée -->
           <ul class="space-y-3">
             <li
               v-for="(item, i) in plan.features"
@@ -67,8 +66,6 @@ import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 const activeIndex = ref(0)
-
-// ✅ On utilise computed pour générer les plans dynamiquement à partir des traductions
 const plans = computed(() => [
   {
     title: t('plans.monthly.title'),

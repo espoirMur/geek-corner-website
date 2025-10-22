@@ -105,4 +105,19 @@ export default {
       glossary: 'Glossaire',
     },
   },
+  how: {
+    integration:
+      'Intégré avec des passerelles de paiement, systèmes d’authentification, bases de données et plateformes d’e-mail marketing.',
+    title: 'Comment ça marche ?',
+    step1:
+      'Nous discutons de votre idée et rédigeons un document détaillé définissant votre futur MVP.',
+    step2: 'Vous suivez la progression en temps réel, avec des mises à jour à chaque étape clé.',
+    step3:
+      'Une fois terminé, nous déployons le produit sur votre serveur, vous formons et assurons une mise en route fluide.',
+    projects_title: 'Voici nos dernières réalisations',
+    watch_button: 'Voir les travaux',
+    modal_title: 'Nos réalisations',
+    modal_description:
+      'Découvrez un aperçu de nos projets récents et des solutions que nous avons développées.',
+  },
 }

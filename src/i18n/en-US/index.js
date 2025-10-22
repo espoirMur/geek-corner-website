@@ -96,4 +96,18 @@ export default {
       glossary: 'Glossary',
     },
   },
+  how: {
+    integration:
+      'Integrated with payment gateways, authentication systems, databases, and email marketing platforms.',
+    title: 'How does it work?',
+    step1: 'We discuss your idea and create a detailed document outlining your future MVP.',
+    step2: 'You watch it come to life in real time, with updates at every milestone.',
+    step3:
+      'Once finished, we deploy the product on your server, onboard you, and ensure a smooth launch.',
+    projects_title: 'Here’s what we’ve built lately',
+    watch_button: 'Watch works',
+    modal_title: 'Our Work',
+    modal_description:
+      'Here’s an overview of our recent projects and what we’ve built for clients.',
+  },
 }

@@ -6,7 +6,6 @@
       </h2>
     </div>
     <div class="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-      <!-- v-motion sur chaque card -->
       <div
         v-for="(plan, index) in plans"
         :key="index"
@@ -18,7 +17,7 @@
         class="p-6 rounded-2xl transition-all duration-300 cursor-pointer"
         :class="[
           activeIndex === index
-            ? 'bg-white shadow-md '
+            ? 'bg-white shadow-md'
             : 'border-2 border-dashed border-gray-300 bg-transparent',
         ]"
       >
@@ -27,14 +26,15 @@
           <p class="text-gray-600 mb-4">{{ plan.price }}</p>
           <p class="text-sm text-gray-500 mb-5">{{ plan.description }}</p>
 
+          <!-- ✅ Liste des features bien structurée -->
           <ul class="space-y-3">
             <li
               v-for="(item, i) in plan.features"
               :key="i"
               class="flex items-center text-gray-700 text-sm"
             >
-              <span v-html="item.icon" class="w-4 h-4 text-blue-600 mr-2"></span>
-              {{ item.text }}
+              <i :class="[item.icon, 'text-blue-600 mr-3 text-base']"></i>
+              <span>{{ item.text }}</span>
             </li>
           </ul>
         </div>
@@ -62,61 +62,41 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 const activeIndex = ref(0)
 
-const plans = [
+// ✅ On utilise computed pour générer les plans dynamiquement à partir des traductions
+const plans = computed(() => [
   {
-    title: 'Monthly',
-    price: '$3,999/m',
-    description: 'Flexible plan that fits most projects and covers any development needs.',
+    title: t('plans.monthly.title'),
+    price: t('plans.monthly.price'),
+    description: t('plans.monthly.description'),
     features: [
-      {
-        text: 'Weekly updates',
-        icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>`,
-      },
-      {
-        text: '60 hours allocation',
-        icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3" /></svg>`,
-      },
-      {
-        text: 'Unlimited requests',
-        icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h8m-8 4h8M5 6h14" /></svg>`,
-      },
-      {
-        text: 'Post-launch support',
-        icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m0 4h-1m0 0V9a1 1 0 011-1h3l3 3v5a1 1 0 01-1 1h-4z" /></svg>`,
-      },
+      { text: t('plans.monthly.features.weekly'), icon: 'fa-solid fa-check-circle' },
+      { text: t('plans.monthly.features.hours'), icon: 'fa-solid fa-clock' },
+      { text: t('plans.monthly.features.unlimited'), icon: 'fa-solid fa-infinity' },
+      { text: t('plans.monthly.features.support'), icon: 'fa-solid fa-headset' },
     ],
-    button: 'Talk to Constantin',
-    footer: 'Book a 30-min call with the founder to see what we can offer.',
+    button: t('plans.monthly.button'),
+    footer: t('plans.monthly.footer'),
   },
   {
-    title: 'Single project',
-    price: '$9,999+',
-    description: 'If you have a one-time task, we’ll go with a custom quote.',
+    title: t('plans.single.title'),
+    price: t('plans.single.price'),
+    description: t('plans.single.description'),
     features: [
-      {
-        text: 'Fixed deliverables',
-        icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12l5 5L20 7" /></svg>`,
-      },
-      {
-        text: 'Fixed milestones',
-        icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6M9 8h6" /></svg>`,
-      },
-      {
-        text: '1–2 months to complete',
-        icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3" /></svg>`,
-      },
-      {
-        text: 'All in monthly',
-        icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v16h16V4H4z" /></svg>`,
-      },
+      { text: t('plans.single.features.deliverables'), icon: 'fa-solid fa-box' },
+      { text: t('plans.single.features.milestones'), icon: 'fa-solid fa-flag-checkered' },
+      { text: t('plans.single.features.duration'), icon: 'fa-solid fa-hourglass-half' },
+      { text: t('plans.single.features.monthly'), icon: 'fa-solid fa-calendar-check' },
     ],
-    button: 'Discuss your project',
-    footer: 'We’ll figure out your needs and estimate the project.',
+    button: t('plans.single.button'),
+    footer: t('plans.single.footer'),
   },
-]
+])
 </script>
 
 <style scoped>

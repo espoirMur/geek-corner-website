@@ -63,70 +63,60 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
 const openIndex = ref(null)
+import { useI18n } from 'vue-i18n'
 
-const items = ref([
+const { t } = useI18n()
+const items = computed(() => [
   {
-    title: 'Can my idea be implemented as an MVP?',
-    content:
-      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore iste laudantium deleniti accusantium voluptas nam, in eaque, error nemo reiciendis beatae. Distinctio cumque iste delectus magni, ut optio at atque!',
+    title: t('faq.q1.title'),
+    content: t('faq.q1.content'),
   },
   {
-    title: 'What type of products do you make?',
-    content:
-      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore iste laudantium deleniti accusantium voluptas nam, in eaque, error nemo reiciendis beatae. Distinctio cumque iste delectus magni, ut optio at atque!',
+    title: t('faq.q2.title'),
+    content: t('faq.q2.content'),
   },
   {
-    title: 'How long will it take?',
-    content:
-      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore iste laudantium deleniti accusantium voluptas nam, in eaque, error nemo reiciendis beatae. Distinctio cumque iste delectus magni, ut optio at atque!',
+    title: t('faq.q3.title'),
+    content: t('faq.q3.content'),
   },
   {
-    title: 'Can you implement my design?',
-    content:
-      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore iste laudantium deleniti accusantium voluptas nam, in eaque, error nemo reiciendis beatae. Distinctio cumque iste delectus magni, ut optio at atque!',
+    title: t('faq.q4.title'),
+    content: t('faq.q4.content'),
   },
   {
-    title: "I don't have a design. What to do?",
-    content:
-      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore iste laudantium deleniti accusantium voluptas nam, in eaque, error nemo reiciendis beatae. Distinctio cumque iste delectus magni, ut optio at atque!',
+    title: t('faq.q5.title'),
+    content: t('faq.q5.content'),
   },
   {
-    title: "What if I don't need a landing page or blog?",
-    content:
-      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore iste laudantium deleniti accusantium voluptas nam, in eaque, error nemo reiciendis beatae. Distinctio cumque iste delectus magni, ut optio at atque!',
+    title: t('faq.q6.title'),
+    content: t('faq.q6.content'),
   },
   {
-    title: 'Can I request changes once you start working?',
-    content:
-      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore iste laudantium deleniti accusantium voluptas nam, in eaque, error nemo reiciendis beatae. Distinctio cumque iste delectus magni, ut optio at atque!',
+    title: t('faq.q7.title'),
+    content: t('faq.q7.content'),
   },
   {
-    title: 'What do I need to provide to you?',
-    content:
-      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore iste laudantium deleniti accusantium voluptas nam, in eaque, error nemo reiciendis beatae. Distinctio cumque iste delectus magni, ut optio at atque!',
+    title: t('faq.q8.title'),
+    content: t('faq.q8.content'),
   },
   {
-    title: 'How do you hand it off to me?',
-    content:
-      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore iste laudantium deleniti accusantium voluptas nam, in eaque, error nemo reiciendis beatae. Distinctio cumque iste delectus magni, ut optio at atque!',
+    title: t('faq.q9.title'),
+    content: t('faq.q9.content'),
   },
   {
-    title: 'Can you help me with further development?',
-    content:
-      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore iste laudantium deleniti accusantium voluptas nam, in eaque, error nemo reiciendis beatae. Distinctio cumque iste delectus magni, ut optio at atque!',
+    title: t('faq.q10.title'),
+    content: t('faq.q10.content'),
   },
   {
-    title: 'What tech stack do you use?',
-    content:
-      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore iste laudantium deleniti accusantium voluptas nam, in eaque, error nemo reiciendis beatae. Distinctio cumque iste delectus magni, ut optio at atque!',
+    title: t('faq.q11.title'),
+    content: t('faq.q11.content'),
   },
   {
-    title: 'Do you offer refunds?',
-    content:
-      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore iste laudantium deleniti accusantium voluptas nam, in eaque, error nemo reiciendis beatae. Distinctio cumque iste delectus magni, ut optio at atque!',
+    title: t('faq.q12.title'),
+    content: t('faq.q12.content'),
   },
 ])
 
@@ -136,7 +126,6 @@ function toggle(index) {
 </script>
 
 <style scoped>
-/* Optionnel : transition plus fluide */
 button:focus {
   outline: none;
 }

@@ -83,4 +83,17 @@ export default {
       content: 'No, but we ensure transparent communication and measurable progress at all times.',
     },
   },
+  founder: {
+    fileName: 'about_the_founder.txt',
+    story:
+      'Hello, I’m Constantin. I went from being a 9–5 developer to launching my own products. The first two were quite successful, generating both income and happy users. Amazing feeling. Seeing others with great ideas who can’t bring them to life motivated me to start Refined. You have an idea, we have coding skills. We build MVPs with just the right features for smooth performance and user love.',
+    title: 'Ready to kick-start your product?',
+    cta: 'Let’s talk.',
+    footer: 'Refined © 2025.',
+    links: {
+      tools: 'Tools',
+      blog: 'Blog',
+      glossary: 'Glossary',
+    },
+  },
 }

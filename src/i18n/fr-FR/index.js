@@ -92,4 +92,17 @@ export default {
         'Non, mais nous garantissons un suivi transparent et des résultats mesurables à chaque étape.',
     },
   },
+  founder: {
+    fileName: 'à_propos_du_fondateur.txt',
+    story:
+      "Bonjour, je suis Constantin. Je suis passé du statut de développeur salarié à celui de créateur de mes propres produits. Les deux premiers ont connu un beau succès, générant à la fois des revenus et des utilisateurs satisfaits. Une sensation incroyable. Voir d'autres personnes avec de bonnes idées mais sans les moyens de les concrétiser m’a motivé à lancer Refined. Vous avez une idée, nous avons les compétences en code. Nous créons des MVP avec juste les fonctionnalités essentielles pour des performances fluides et une expérience utilisateur optimale.",
+    title: 'Prêt à lancer votre produit ?',
+    cta: 'Discutons-en.',
+    footer: 'Refined © 2025.',
+    links: {
+      tools: 'Outils',
+      blog: 'Blog',
+      glossary: 'Glossaire',
+    },
+  },
 }

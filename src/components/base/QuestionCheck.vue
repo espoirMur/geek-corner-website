@@ -8,7 +8,7 @@
     <div
       v-for="(item, index) in items"
       :key="index"
-      class="bg-white w-2/3 shadow-sm rounded-xl overflow-hidden border border-gray-200 mb-3 hover:shadow-md transition-all duration-300"
+      class="bg-white w-2/3 shadow-sm rounded-xl overflow-hidden border border-gray-200 mb-3 transition-all duration-300"
     >
       <!-- HEADER -->
       <button

@@ -23,8 +23,6 @@
         {{ t('how.integration') }}
       </span>
     </div>
-
-    <!-- Section "Comment" -->
     <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-gray-900 mt-10">
       {{ t('how.title') }}
     </h2>

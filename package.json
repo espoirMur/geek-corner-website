@@ -1,9 +1,9 @@
 {
-  "name": "webproject",
+  "name": "geekCornerWebsite",
   "version": "0.0.1",
-  "description": "A Web Project",
+  "description": "Geek Corner Website",
   "productName": "Web App",
-  "author": "Bwirabuciza29 <blondybwirabuciza@gmail.com>",
+  "author": "Geek Corner Dev Team <info@geekscorner.tech>",
   "type": "module",
   "private": true,
   "scripts": {

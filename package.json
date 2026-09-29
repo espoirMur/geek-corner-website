@@ -10,9 +10,9 @@
     "lint": "eslint -c ./eslint.config.js \"./src*/**/*.{js,cjs,mjs,vue}\"",
     "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0",
-    "dev": "quasar dev",
-    "build": "quasar build",
-    "postinstall": "quasar prepare"
+    "dev": "pnpm quasar dev",
+    "build": "pnpm quasar build",
+    "postinstall": "pnpm quasar prepare"
   },
   "dependencies": {
     "@heroicons/vue": "^2.2.0",
